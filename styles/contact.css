@@ -1,0 +1,101 @@
+ #titrebox{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            color: #ff6600;
+            margin: 30px 30px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px rgba(206, 99, 10, 0.804);
+            font-family: normal;
+        }
+
+        h2{
+            text-align: center;
+            text-decoration: none;
+        }
+        .contact {
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px gray;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 30px;
+        }
+
+        #map {
+            height: 65vh;
+            width: 50%;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-container {
+            width: 40%;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            animation: slideIn 0.8s ease;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .form-container label {
+            font-weight: 600;
+            margin-bottom: 5px;
+            display: block;
+            color: #34495e;
+        }
+
+        .form-container input,
+        .form-container textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+        .form-container input:focus,
+        .form-container textarea:focus {
+            border-color: #f39c12;
+            outline: none;
+            box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            font-size: 1.1rem;
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #d68910;
+            transform: translateY(-3px);
+        }
+        @media (max-width: 1000px) {
+        .contact {
+            flex-direction: column;
+            padding: 15px;
+        }
+        #map {
+            width: 100% ;
+            height: 50vh;
+        }
+        .form-container {
+            width: 100% ;
+            margin-top: 20px;
+        }
+        }

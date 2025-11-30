@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Reçu d'achat</title>
+    <link rel="stylesheet" href="../styles/recu.css">
+</head>
+<body>
+    <div id="recu">
+        <h2>Reçu d'achat</h2>
+        <div id="N_fact"><strong>Numero de Facture: </strong><span id="r_numero"></span></div>
+        <h3>Informations du client</h3>
+        <p><strong>Nom :</strong> <span id="r_nom"></span></p>
+        <p><strong>Email :</strong> <span id="r_email"></span></p>
+        <p><strong>Téléphone :</strong> <span id="r_tel"></span></p>
+        <p><strong>Adresse :</strong> <span id="r_adresse"></span></p>
+        <p><strong>Méthode de paiement :</strong> <span id="r_pay"></span></p>
+        <p><strong>Date :</strong> <span id="r_date"></span></p>
+
+        <h3>Voitures achetées</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Marque / Modèle</th>
+                    <th>Carburant</th>
+                    <th>Puissance</th>
+                    <th>Boîte</th>
+                    <th>Prix (€)</th>
+                </tr>
+            </thead>
+            <tbody id="liste_voitures"></tbody>
+        </table>
+
+        <p class="total">Total : <span id="total_prix"></span> €</p>
+
+        <img src="../images/cashet.png" alt="cashet">
+        
+    </div>
+    <button class="btn-print" onclick="window.print()">Imprimer le reçu</button>
+
+    <script src="../js/recu.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Panier</title>
+    <script src="https://kit.fontawesome.com/61291eb407.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../styles/panier.css">
+    <script src="https://kit.fontawesome.com/61291eb407.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="titre">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <h1>Panier</h1>
+    </div>
+
+
+    <div id="panier">   </div>
+        <!--acheter et vider le panier buttons-->
+        
+    <div id="achetervider">
+        <button id="acheterall" onclick="acheterpanier()">Acheter</button>
+        <button id="viderpanier" onclick="viderPanier()">Vider le panier</button>
+    </div>
+    <hr width="90%" size="2px" >
+    <!--formulaire pour remplir a l'achat affiche seulement apres acheter-->
+    <div id="achatform" style="display: none;">
+        <h2>Formulaire d'achat d'une voiture</h2>
+        <!-- Informations acheteur -->
+        <fieldset>
+            <legend>Informations de l'acheteur</legend>
+            <div class="inputplace">
+                <label for="nom"><i class="fa-solid fa-user"></i></label><br>
+                <input type="text" id="nom" name="nom" required placeholder="Nom complet"><br><br>
+            </div>
+            <div class="inputplace">
+                <label for="email"><i class="fa-solid fa-at"></i></label><br>
+                <input type="email" id="email" name="email" required placeholder="email adress"><br><br>
+            </div>
+            <div class="inputplace">
+                <label for="telephone"><i class="fa-solid fa-phone"></i></label><br>
+                <input type="tel" id="telephone" name="telephone" required placeholder="numero de telephone"><br><br>
+            </div> 
+            <div class="inputplace">
+                <label for="adresse"><i class="fa-solid fa-location-dot"></i></label><br>
+                <input type="text" id="adresse" name="adresse" placeholder="adresse" required>
+            </div>
+        </fieldset>
+        <br><br>
+          <!-- Mode de paiement -->
+        <fieldset>
+            <legend>Paiement</legend>
+            <div class="inputplace">
+                <label for="modePaiement"><i class="fa-solid fa-money-check-dollar"></i></label><br>
+                <select id="modePaiement" name="modePaiement" required>
+                    <option value="">-- Sélectionner --</option>
+                    <option value="especes">Espèces</option>
+                    <option value="virement">Virement bancaire</option>
+                    <option value="cheque">Chèque</option>
+                    <option value="credit">Crédit / Financement</option>
+                </select><br><br>
+            </div>
+        </fieldset>
+        <br>
+        <div id="validatezone">
+            <button  id="validerachat" onclick="validerpanier()">valider</button>
+        </div>
+        <br><br>
+        <hr width="90%" size="2px" >
+    
+    </div>
+    <script src="../js/panier.js"></script>
+</body>
+<script src="../js/controllsize.js"></script>
+</html>

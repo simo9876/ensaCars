@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Localisation - Ensa Agadir</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <link rel="stylesheet" href="../styles/contact.css">
+</head>
+<body>
+    <!--title box-->
+    <div id="titrebox">
+        <h2>📍 Notre Localisation & Contact</h2>
+    </div>
+
+    <div class="contact">
+        <div id="map"></div>
+
+        <div class="form-container">
+            <h3 style="margin-bottom: 15px; color:#e67e22;">💬 Contactez-nous</h3>
+            <form>
+                <label>Nom</label>
+                <input type="text" placeholder="Entrez votre nom">
+
+                <label>Numéro de Téléphone ou Email</label>
+                <input type="text" placeholder="Votre téléphone ou email">
+
+                <label>Sujet</label>
+                <input type="text" placeholder="Sujet de votre message">
+
+                <label>Message</label>
+                <textarea rows="5" placeholder="Écrivez votre message..."></textarea>
+
+                <button class="btn">Envoyer 🚀</button>
+            </form>
+        </div>
+    </div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+    const agadir = [30.4059896, -9.5299261];
+    const map = L.map('map').setView(agadir, 13);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+    }).addTo(map);
+
+    L.marker(agadir).addTo(map)
+        .bindPopup("<b>Nous sommes ici !</b><br>Agadir, Maroc.")
+        .openPopup();
+</script>
+<script src="../js/controllsize.js"></script>
+
+</body>
+</html>

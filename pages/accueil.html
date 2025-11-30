@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../styles/accueil.css">
+      <title>Accueil</title>
+  </head>
+
+  <body>
+    <section id="recherche">
+      
+      <h1>Trouvez la voiture idéale en quelques clics</h1>
+      <h3>Comparez, choisissez et réservez parmi nos modèles sélectionnés avec soin.</h3><br>
+      
+      <div class="search-container">
+        <select id="marqueSelect"><option value="">-- Choisir une marque --</option></select>
+        <select id="modelSelect" disabled><option value="">-- Choisir un modèle --</option></select>
+
+        <input type="number" id="prixMin" placeholder="Prix Min (€)">
+        <input type="number" id="prixMax" placeholder="Prix Max (€)">
+
+        <select id="carburant">
+          <option value="">-- Carburant --</option>
+          <option value="Essence">Essence</option>
+          <option value="Diesel">Diesel</option>
+          <option value="Hybride">Hybride</option>
+          <option value="Électrique">Électrique</option>
+          <option value="GPL">GPL</option>
+        </select>
+
+        <button id="btnRechercher">Rechercher</button>
+      </div>
+    </section>
+
+    <div class="espace"></div>
+
+    <section id="voitures"></section>
+
+    <div id="pagination"></div>
+
+
+    <script src="../js/data.js"></script>
+    <script src="../js/controllsize.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="../js/acceuil.js"></script>
+
+  </body>
+</html>
